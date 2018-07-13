@@ -1,6 +1,4 @@
-// this is my first js code 
-let name  = 'Mosh';
-
-console.log(name);
-
+let     selectedColours = ['red','blue'];
+selectedColours [2] = 1 ;
+console.log(selectedColours.length)
 
