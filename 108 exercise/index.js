@@ -1,16 +1,31 @@
+const marks = [80 , 80 ,50 ] ;
 
-const movie = {
-    title: 'a' ,
-    releaseYear : 2018 , 
-    rating : 4.5 , 
-    director : 'b'
-} ; 
 
-showProperties(movie)
 
-function showProperties(obj) {
-    for (let key in obj)
-    if (typeof obj[key] === 'string')
-    console.log(key,obj[key]) ;
+console.log(calculateGrade(marks))
+
+function calculateGrade(marks) {
+    const average   =  calculateAverage(marks) ; 
+
+      if (average < 60) return 'f' ; 
+      if (average < 70) return 'd' ; 
+      if (average < 80) return 'c' ; 
+      if (average < 60) return 'b' ;
+      return 'a' ;  
+       
+        
     
 }
+
+
+function calculateAverage(array) {
+    let sum  =  0 ; 
+    
+    for (let value of array) 
+        sum += value ; 
+        return sum / marks.length ; 
+  
+  
+    
+      
+  }
